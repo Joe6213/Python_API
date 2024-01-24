@@ -19,7 +19,7 @@ class API:
         '''
         self.token="0"
         self.ip=ip
-    def GetAccessToken(self)-> str: 
+    def GetAccessToken(self)-> None: 
         ''' GetAccessToken is the function that get the token from server.
             Parameters
             ----------
@@ -34,11 +34,6 @@ class API:
             recieve: json
                 The data that server return.
                 Access token content in key:['data']
-            
-            Returns
-            -------
-            type:       string
-            describe:   The server api access token
                 
         '''
         url = 'http://'+self.ip+"/api/auth/login" 
